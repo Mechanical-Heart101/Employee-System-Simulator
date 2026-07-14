@@ -99,5 +99,20 @@ public class Payroll
         }
     }
 
+    /**
+     * This is the calculate payroll method
+     */
+    public void calculateTotalPayroll()
+    {
+        int total = 0;
+
+        for (Employee employee : employees)
+        {
+            total += employee.calculateSalary();
+        }
+
+        System.out.println("The total payroll is: " + total);
+    }
+
 
 }

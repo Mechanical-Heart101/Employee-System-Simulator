@@ -17,7 +17,8 @@ public class PayrollApp
             System.out.println("3. View employees");
             System.out.println("4. Find Employee");
             System.out.println("5. Remove employee");
-            System.out.println("6. Exit");
+            System.out.println("6. Calculate total payroll");
+            System.out.println("7. Exit");
 
             int choice = scanner.nextInt();
             scanner.nextLine(); // consume leftover new Line
@@ -84,11 +85,17 @@ public class PayrollApp
                     payroll.removeEmployee(employeeId);
 
                     break;
+
                 
-                case 6 : // exiting
+                case 6 : // calculate total Payroll
+                    payroll.calculateTotalPayroll();
+
+                    break;    
+                
+                case 7 : // exiting
                     running = false;
                     break;
-                
+
                 default :
                     System.out.println("Invalid input! Please select correctly");
 
